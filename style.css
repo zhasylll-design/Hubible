@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 2% 4%;
+    width:100vw;
+    height:100vh;
+    background-color: #021325;
+    box-sizing: border-box;
+}
+
+#Hubible_logo {
+    height: clamp(50px, 15vh, 100px);
+    width: auto;
+}
+
+.pattern-background {
+    position: fixed;
+    inset: -1000000px;
+    z-index: -1;
+    background-image: url(./images/background_image.svg);
+    background-size: 40px 40px;
+    opacity: 0.08;
+    transform: rotate(45deg);
+    pointer-events: none;
+    animation: pattern-move 5s linear infinite;
+}
+
+@keyframes pattern-move {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 40px 40px;
+    }
+}
